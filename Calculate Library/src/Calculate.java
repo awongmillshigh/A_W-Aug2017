@@ -64,6 +64,21 @@ public class Calculate {
 	public static double foil(int operand1, int operand2, int operand3, int operand4){
 		int foil = operand1*operand3+operand1*operand4+operand2*operand3+operand2*operand4;
 		return foil;
-		
+	}
+	
+	//determines if an integer is divisible by another
+	public static double isDivisibleBy(int operand1. int operand2){
+		if(operand1%operand2==0){
+			System.out.println(operand1 + " is divisible by " + operand2);
+		}else{
+			System.out.println(operand1 + "is not divisible by " + oeprand2);
+		}
+		return isDivisibleBy;
+	}
+	
+	//returns an absolute value
+	public static double absValue(int operand){
+		int absValue();
+		returnabsValue;
 	
 }
