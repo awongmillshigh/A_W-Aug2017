@@ -80,5 +80,32 @@ public class Calculate {
 	public static double absValue(int operand){
 		int absValue();
 		returnabsValue;
+	}
+	
+	//returns a larger value passed
+	public static double max(int operand1, int operand2){
+		if(operand1>operand2){
+			System.out.println("The larger value is " + operand1);
+		}else{
+			System.out.println("The larger value is " + operand2);
+		}
+		return max;
+	}
+	
+	//returns a smaller value
+	public static double min(int operand1, int operand2){
+		if(operand1<operand2){
+			System.out.println("The smaller value is " +  operand1);
+		}else{
+			System.out.println("The smaller value is " + operand2);
+		}
+		return min;
+	}
+	
+	//rounds a double to 2 decimal places
+	public static double round2(double operand){
+		double round2 = 
+		return round2;
+	}
 	
 }
