@@ -109,7 +109,7 @@ public class Calculate {
 	}
 	
 	//raises a value to a positive integer
-	public static double exponent(double base, int powr){
+	public static double exponent(double base, int power){
 		double exponent = base*;
 		return exponent;
 	}
@@ -131,6 +131,20 @@ public class Calculate {
 	//returns an approximation of the square root of the value passed, rounded to 2 decimal places
 	public static sqrt(double operand){
 	}
+	
+	//rounds a double to 2 decimal places
+		public static double round2(double orig){
+			double result = 0.0;
+			
+			int tempInt = (int)(orig*1000);
+			int roundNum = tempInt%10;
+			if(roundNum >= -5 && tempInt > 0) 
+				tempInt++;
+			else if(roundNum <= -5 && tempInt < 0)
+				tempInt--;
+			result = tempInt/ 100.0;
+			return result;
+		}
 			
 	
 }
