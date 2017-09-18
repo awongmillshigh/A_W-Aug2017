@@ -108,4 +108,29 @@ public class Calculate {
 		return round2;
 	}
 	
+	//raises a value to a positive integer
+	public static double exponent(double base, int powr){
+		double exponent = base*;
+		return exponent;
+	}
+	
+	//returns a factorial of the value passed
+	public static double factorial(int operand){
+		
+	}
+	
+	
+	//determines whether an integer is prime
+	public static double isPrime(int operand){
+	}
+	
+	//finds the greatest common factor of 2 integers
+	public static gcf(int operand1, int operand2){
+	}
+	
+	//returns an approximation of the square root of the value passed, rounded to 2 decimal places
+	public static sqrt(double operand){
+	}
+			
+	
 }
