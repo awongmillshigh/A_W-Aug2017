@@ -103,9 +103,17 @@ public class Calculate {
 	}
 	
 	//rounds a double to 2 decimal places
-	public static double round2(double operand){
-		double round2 = 
-		return round2;
+	public static double round2(double orig){
+	double result = 0.0;
+			
+	int tempInt = (int)(orig*1000);
+	int roundNum = tempInt%10;
+	if(roundNum >= -5 && tempInt > 0) 
+		tempInt++;
+	else if(roundNum <= -5 && tempInt < 0)
+		tempInt--;
+	result = tempInt/ 100.0;
+	return result;
 	}
 	
 	//raises a value to a positive integer
@@ -122,6 +130,10 @@ public class Calculate {
 	
 	//determines whether an integer is prime
 	public static double isPrime(int operand){
+		if(int operand >1){
+		System.out.println("The number " + operand + " is a prime number.");
+		}
+		return isPrime;
 	}
 	
 	//finds the greatest common factor of 2 integers
@@ -131,20 +143,6 @@ public class Calculate {
 	//returns an approximation of the square root of the value passed, rounded to 2 decimal places
 	public static sqrt(double operand){
 	}
-	
-	//rounds a double to 2 decimal places
-		public static double round2(double orig){
-			double result = 0.0;
-			
-			int tempInt = (int)(orig*1000);
-			int roundNum = tempInt%10;
-			if(roundNum >= -5 && tempInt > 0) 
-				tempInt++;
-			else if(roundNum <= -5 && tempInt < 0)
-				tempInt--;
-			result = tempInt/ 100.0;
-			return result;
-		}
-			
+				
 	
 }
