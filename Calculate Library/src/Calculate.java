@@ -132,7 +132,8 @@ public class Calculate {
 	public static double isPrime(int operand){
 		if(int operand >1){
 		System.out.println("The number " + operand + " is a prime number.");
-		}
+		}else{
+			System.out.println("The number " operand + " is not a prime number");
 		return isPrime;
 	}
 	
