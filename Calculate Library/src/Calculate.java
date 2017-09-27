@@ -124,7 +124,15 @@ public class Calculate {
 	
 	//returns a factorial of the value passed
 	public static double factorial(int operand){
-		
+		if (operand < 0) {
+			throw new IllegalArgumentException("The value cannot be negative.");
+		}
+		int factorialValue = 1;
+		for (int i = 0; i < operand; i++) {
+			factorialValue *= i + 1;
+		}
+		return factorialValue;
+			
 	}
 	
 	
@@ -133,16 +141,35 @@ public class Calculate {
 		if(int operand >1){
 		System.out.println("The number " + operand + " is a prime number.");
 		}else{
-			System.out.println("The number " operand + " is not a prime number");
+		System.out.println("The number " operand + " is not a prime number");
 		return isPrime;
 	}
 	
 	//finds the greatest common factor of 2 integers
 	public static gcf(int operand1, int operand2){
+		int gcf = 1;
+		for (int i = 1; i <= min(num1, num2); i++) {
+			if (isDivisibleBy(num1, i) && isDivisibleBy(num2, i)) {
+				if (gcf < i) {
+					gcf = i;
+				}
+			}
+		}
+		return gcf;
 	}
 	
 	//returns an approximation of the square root of the value passed, rounded to 2 decimal places
 	public static sqrt(double operand){
+		double guess = 0.1;
+		double guessSqrt = 0;
+		if (num < 0) {
+			throw new IllegalArgumentException("The square root of " + num + " is imaginary.");
+		}
+		while (round2(guessSqrt * guessSqrt) != num) {
+			guessSqrt = 0.5 * (num / guess + guess);
+			guess += 0.1;
+		}
+		return round2(guessSqrt);
 	}
 				
 	
