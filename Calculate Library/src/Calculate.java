@@ -171,6 +171,21 @@ public class Calculate {
 		}
 		return round2(guessSqrt);
 	}
+		
+	public static String quadForm(int a, int b, int c) {
+		double discr = discriminant(a, b, c);
+		if (discr < 0) {
+			return "no real roots";
+		} else if (discr == 0) {
+			double result = (-b + sqrt(discr)) / (2 * a);
+			return round2(result) + "";
+		} else {
+			double posResult = (-b + sqrt(discr)) / (2 * a);
+			double negResult = (-b - sqrt(discr)) / (2 * a);
+			return round2(negResult) + " and " + round2(posResult);
+		}
+	}
+}
 				
 	
 }
