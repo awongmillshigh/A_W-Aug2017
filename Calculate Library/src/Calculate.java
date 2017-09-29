@@ -118,8 +118,17 @@ public class Calculate {
 	
 	//raises a value to a positive integer
 	public static double exponent(double base, int power){
-		double exponent = base*;
-		return exponent;
+		double operand = base;
+		double result; 
+		if(power<0){
+			throw new IllegalArgumentException("The exponent cannot be negative");
+		}else{
+			for(int i = 0; i < power - 1; i++){
+				operand *= base;
+			}
+			result = operand;
+		}
+		return result;
 	}
 	
 	//returns a factorial of the value passed
@@ -171,6 +180,7 @@ public class Calculate {
 		}
 		return round2(guessSqrt);
 	}
+	
 		
 	public static String quadForm(int a, int b, int c) {
 		double discr = discriminant(a, b, c);
