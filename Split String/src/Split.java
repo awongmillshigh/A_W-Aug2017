@@ -2,7 +2,7 @@ import java.util.*;
 public class Split {
 
 	public static void main(String[] args) {
-		String[] sandwhich = "applespineapplesbreadlettustomatobaconmayohambreadcheese".split("");
+		String[] sandwhich = "applespineapplesbreadlettustomatobaconmayohambreadcheese";
 		String middle = "";
 		System.out.println(Array.toString.("bread").split);
 				
